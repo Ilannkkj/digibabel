@@ -1,0 +1,153 @@
+/* Fonte Texto Projeto */
+
+@font-face {
+    font-family: 'Sawarabi Gothic';
+    src: url('fonts/Sawarabi_Gothic/Sawarabi_Gothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sawarabi Gothic', sans-serif; 
+}
+
+body {
+  display: flex;
+  background-image: url('../images/background-login.png');
+}
+
+main {
+    flex: 1;
+    color:white;
+    display: flex;
+    flex-direction: column;
+}
+/* Navbar */
+.logo {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.background-navbar-home {
+    display: block;
+    margin-top: 200px;
+    width: 373px;
+    opacity: 0.15;
+}
+
+ul.sidenav {
+  background: #34B3ED;
+  background: linear-gradient(0deg, rgba(52, 179, 237, 1) 0%,
+ rgba(30, 102, 135, 1) 89%);
+  height: 100vh;
+  width: 375px;
+  border-radius:0px 20px 20px 0px;
+  position:sticky;
+}
+  div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+  }
+
+  ul.sidenav {
+  list-style-type: none;
+  width: 375px;
+  background: #34B3ED;
+  background: linear-gradient(0deg, rgba(52, 179, 237, 1) 0%,
+ rgba(30, 102, 135, 1) 89%);
+  height: 100vh;
+  width: 375px;
+  border-radius:0px 20px 20px 0px;
+  }
+  
+  div.content {margin-left: 0;}
+
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+
+.texto-rodape {
+    color: white;
+    text-align: center;
+    margin-top: 250px;
+}
+
+.formularios {
+  margin-top: 150px;
+}
+
+.content {
+  margin-left: 5px;
+  padding: 10px 10px;
+}
+
+.content h1 {
+  font-size:60px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input-forms {
+  display:flex;
+  align-items: center;
+  background: #F2ECEC;
+  background: linear-gradient(0deg, rgba(242, 236, 236, 1) 0%,
+ rgba(140, 137, 137, 1) 100%);
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 0 12px;
+  width: 600px;
+}
+
+.input-forms img,
+.input-forms svg {
+  width: 18px;
+  height: 50px;
+  margin-right: 8px;
+  opacity: 0.6;
+}
+
+.input-forms input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  background: transparent;
+  color: #333;
+}
+
+.botao-form {
+  background: #49D342;
+  background: linear-gradient(0deg, rgba(73, 211, 66, 1) 0%, 
+rgba(38, 109, 34, 1) 100%);
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  height: 40px;
+  color:white;
+  margin-left: 170px;
+}
+
+.botao-form:hover {
+  background: #13810d;
+  background: linear-gradient(0deg, rgb(19, 129, 14) 0%, 
+rgb(7, 58, 5) 100%);
+}
+
+a {
+  color:#ffffff;
+  margin-left: 170px;
+}
+
+a:hover {
+  color:#34B3ED;
+}

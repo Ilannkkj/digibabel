@@ -1,0 +1,115 @@
+/* Fonte Texto Projeto */
+
+@font-face {
+    font-family: 'Sawarabi Gothic';
+    src: url('fonts/Sawarabi_Gothic/Sawarabi_Gothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sawarabi Gothic', sans-serif; 
+}
+
+
+/* Body */
+
+body {  
+    background: #FFFFFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 60%, 
+    rgba(153, 153, 153, 1) 100%);
+}
+
+/* Navbar */
+.logo {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.nav-icon {
+    
+}
+
+.background-navbar {
+    display: block;
+    margin-left: 70px;
+    margin-top: 60px;
+    width: 300px;
+    opacity: 0.15;
+}
+
+body {margin: 0;}
+
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background: #34B3ED;
+  background: linear-gradient(0deg, rgba(52, 179, 237, 1) 0%,
+ rgba(30, 102, 135, 1) 89%);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li a {
+  display: block;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+  margin-left: 1.5%;
+  width: 87.5%;
+  border-radius: 7px;
+  background: #7BCFF5;
+  background: linear-gradient(0deg, rgba(123, 207, 245, 1) 0%, 
+rgba(72, 121, 143, 1) 100%);
+  color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  margin-left: 1.5%;
+  width: 87.5%;
+  border-radius: 7px;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, 
+rgb(174, 175, 175) 100%);
+  color: rgb(0, 0, 0);
+}
+
+div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}
