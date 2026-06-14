@@ -1,68 +1,41 @@
-//lógica para capturar os dados do HTML
-const formLogin = document.getElementById('form-login');
-const formCadastro = document.getElementById('form-cadastro');
+const mostrarLogin = document.getElementById("form-cadastro").style.display = 'none';
 
-form.addEventListener('submit', e=>{
-    e.preventDefault(); //evitar o formulário recarregar a página
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    console.log(nome);
-    console.log(email);
+const paginaCadastro = document.getElementById("link-cadastro");
+const paginaLogin = document.getElementById("link-login");
 
-    logarUsuario(nome, email); //chamar a função cadastrar usuário
+const formLogin = document.getElementById("form-login");
+const formCadastro = document.getElementById("form-cadastro");
+
+paginaCadastro.addEventListener("click", e=> {
+
+    document.getElementById("form-login").style.display = 'none';
+    document.getElementById("form-cadastro").style.display = '';
+
 });
 
-form.addEventListener('submit', e=>{
-    e.preventDefault(); //evitar o formulário recarregar a página
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
-    console.log(nome);
-    console.log(email)
-    console.log(senha);
-
-    cadastrarUsuario(nome, email, senha); //chamar a função cadastrar usuário
+paginaLogin.addEventListener("click", e=> {
+    document.getElementById("form-login").style.display = '';
+    document.getElementById("form-cadastro").style.display = 'none';
 });
 
-function logarUsuario(nome, email){
-    fetch('/api/users/logar', { //caminho para o servidor (backend)
-        method: 'GET',
-        headers: {'Content-Type':'application/json'}, //mensagem é do tipo JSON
-        body: JSON.stringify({nome, email}) //converter o objeto em uma string json
-    })
-    .then(()=>{
-        form.reset(); //limpar o formulário
-    })
-}
-
-const linkCadastro = document.getElementById('link-cadastro');
-const formLogin = document.getElementById('form-login');
-const formCadastro = document.getElementById('form-cadastro');
-
-linkCadastro.addEventListener('click', (e) => {
+formCadastro.addEventListener("submit", e=> {
     e.preventDefault();
 
-    formLogin.classList.add('escondido');
-    formCadastro.classList.add('escondido');
-})
+    const nomeCadastro = document.getElementById("nomeCadastro").value;
+    const emailCadastro = document.getElementById("emailCadastro").value;
+    const senhaCadastro = document.getElementById("senhaCadastro").value;
+    const tipoPerfil = document.getElementById("tipoPerfil").value;
 
-function cadastrarUsuario(nome, email, senha){
-    fetch('/api/users/cadastrar', { //caminho para o servidor (backend)
-        method: 'POST',
-        headers: {'Content-Type':'application/json'}, //mensagem é do tipo JSON
-        body: JSON.stringify({nome, email, password}) //converter o objeto em uma string json
+    cadastrarUsuario(nomeCadastro, emailCadastro, senhaCadastro, tipoPerfil);
+}); 
+
+function cadastrarUsuario(nomeCadastro, emailCadastro, senhaCadastro, tipoPerfil) {
+    fetch("/api/usuario/cadastrarUsuario", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({nomeCadastro, emailCadastro, senhaCadastro, tipoPerfil})
     })
-    .then(()=>{
-        form.reset(); //limpar o formulário
+    .then(()=> {
+        formCadastro.reset();
     })
-}
-
-function mostrarCadastro() {
-    document.getElementById('form-login').classList.add('escondido');
-    document.getElementById('form-cadastro').classList.remove('escondido');
-}
-
-function mostrarLogin() {
-    document.getElementById('form-cadastro').classList.add('escondido');
-    document.getElementById('form-login').classList.remove('escondido');
 }

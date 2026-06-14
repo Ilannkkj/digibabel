@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,58 +22,69 @@
     <main>
         <div class="content">
         
-    <div class="form-login">
+    <div>
 
-        <h1>FAÇA <br> 
-        LOGIN</h1>
+        <form class="formularios" id="form-login" method="POST">
+            <h1>FAÇA <br> 
+            LOGIN</h1>
 
-        <form class="formularios" id="login-form" action="POST">
             <div class="input-forms">
                 <img src="sources/icons/icone-nome.svg" alt="Icone Nome">
-                <label for="nome"></label>
-                <input type="text" id="nome" placeholder="Nome" required> <br> <br>
+                <label for="nomeLogin"></label>
+                <input type="text" id="nomeLogin" placeholder="Nome" required> <br> <br>
             </div> <br>
 
             <div class="input-forms">
                 <img src="sources/icons/icone-senha.svg" alt="Icone Senha">
-                <label for="senha"></label>
-                <input type="password" id="senha" placeholder="Senha" required> <br> <br>
+                <label for="senhaLogin"></label>
+                <input type="password" id="senhaLogin" placeholder="Senha" required> <br> <br>
             </div> <br>  
             
-            <button class="botao-form">Logar</button> <br> <br>
+            <button type="submit" class="botao-form">Logar</button> <br> <br>
+
+            <a href="#" id="link-cadastro">Não possui conta? Cadastre-se</a>
 
         </form>
 
-        <a href="#" id="link-cadastro">Não possui conta? Cadastre-se</a>
-
     </div>
 
-    <div class="form-cadastro">
+    <div>
 
-        <h1>CADASTRE-SE </h1>
+        <form class="formularios" id="form-cadastro" method="POST">
+            <h1>CADASTRE-SE </h1>
 
-        <form class="formularios" id="login-form" action="POST">
             <div class="input-forms">
                 <img src="sources/icons/icone-nome.svg" alt="Icone Nome">
-                <label for="nome"></label>
-                <input type="text" id="nome" placeholder="Nome" required> <br> <br>
+                <label for="nomeCadastro"></label>
+                <input type="text" id="nomeCadastro" placeholder="Nome" required> <br> <br>
             </div> <br>
 
             <div class="input-forms">
                 <img src="sources/icons/icone-email.svg" alt="Icone Senha">
-                <label for="email"></label>
-                <input type="email" id="email" placeholder="E-mail" required> <br> <br>
+                <label for="emailCadastro"></label>
+                <input type="email" id="emailCadastro" placeholder="E-mail" required> <br> <br>
             </div> <br>
 
             <div class="input-forms">
                 <img src="sources/icons/icone-senha.svg" alt="Icone Senha">
-                <label for="senha"></label>
-                <input type="password" id="password" placeholder="Senha" required> <br> <br>
-            </div> <br>  
+                <label for="senhaCadastro"></label>
+                <input type="password" id="senhaCadastro" placeholder="Senha" required> <br> <br>
+            </div> <br> 
             
-            <button class="botao-form">Cadastrar</button> <br> <br>
-
+            <div class="input-forms">
+                <img src="sources/icons/icone-tipoConta.svg" alt="Icone Tipo Conta">
+                <label for="tipoPerfil"></label>
+                <select id="tipoPerfil">
+                    <option value="bibliotecario">Bibliotecario</option>
+                    <option value="leitor">Leitor</option>
+                </select>
+            </div> <br> 
+            
+            <button type="submit" class="botao-form">Cadastrar</button> <br> <br>
+            
+            <a href="#" id="link-login">Possui conta? Faça Login</a>
         </form>
+    </div>
     </main>
     <script src="app.js"></script>
 </body>
